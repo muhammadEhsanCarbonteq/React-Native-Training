@@ -20,12 +20,6 @@ function LoginScreenContainer({navigation}) {
     navigation.navigate('Signup', {name: 'Signup'});
   };
 
-  // useEffect(() => {
-  //   console.log('====================================');
-  //   console.log('text > ', text);
-  //   console.log('====================================');
-  // }, [text]);
-
   return (
     <LoginScreen
       show={show}

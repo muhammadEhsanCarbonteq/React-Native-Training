@@ -24,12 +24,7 @@ function EventScreen({
             width: 22,
           }}>
           <Image
-            style={{
-              width: 22,
-              height: 20,
-              marginLeft: 15,
-              marginBottom: 30,
-            }}
+            style={styles.backArrowImage}
             source={require('../../images/BackArrow.png')}
           />
         </Pressable>
@@ -75,14 +70,7 @@ function EventScreen({
           })}
         </ScrollView>
       </SafeAreaView>
-      <View
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          borderRadius: 30,
-          backgroundColor: 'white',
-          width: '100%',
-        }}>
+      <View style={styles.buttonContainer}>
         <View
           style={{
             paddingHorizontal: 25,

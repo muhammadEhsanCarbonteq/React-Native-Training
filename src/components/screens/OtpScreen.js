@@ -53,13 +53,7 @@ function OtpScreen({
           width: 22,
         }}>
         <Image
-          style={{
-            width: 22,
-            height: 20,
-            marginTop: 70,
-            // marginLeft: 15,
-            marginBottom: 80,
-          }}
+          style={styles.backArrowImage}
           source={require('../../images/BackArrow.png')}
         />
       </Pressable>

@@ -66,16 +66,10 @@ function LoginScreen({
               color: 'black',
             }}>
             Don't Have a Account?
-            {/* <TouchableOpacity
-              style={{
-                paddingTop: 10,
-                marginLeft: 10,
-              }}> */}
             <Text onPress={onSignUp} style={{color: '#3B68FF'}}>
               {' '}
               Sign up
             </Text>
-            {/* </TouchableOpacity> */}
           </Text>
         </View>
       </View>

@@ -1,19 +1,9 @@
 import React from 'react';
-import {
-  Image,
-  Pressable,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  View,
-} from 'react-native';
+import {Image, Pressable, SafeAreaView, ScrollView, View} from 'react-native';
 import TitleDescriptionComponent from '../common/TitleDescriptionComponent';
 import styles from '../../styles/sharedStylesheet';
 import CustomButton from '../common/CustomButton';
-import userDetails from '../../constants/details';
 import CustomDetails from '../common/CustomDetails';
-import {Value} from 'react-native-reanimated';
-import {value} from 'deprecated-react-native-prop-types/DeprecatedTextInputPropTypes';
 
 function DetailScreen({onPressBack, onScanQR}) {
   return (
@@ -25,12 +15,7 @@ function DetailScreen({onPressBack, onScanQR}) {
             width: 22,
           }}>
           <Image
-            style={{
-              width: 22,
-              height: 20,
-              marginLeft: 15,
-              marginBottom: 30,
-            }}
+            style={styles.backArrowImage}
             source={require('../../images/BackArrow.png')}
           />
         </Pressable>
@@ -69,14 +54,7 @@ function DetailScreen({onPressBack, onScanQR}) {
           </ScrollView>
         </View>
       </SafeAreaView>
-      <View
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          borderRadius: 30,
-          backgroundColor: 'white',
-          width: '100%',
-        }}>
+      <View style={styles.buttonContainer}>
         <View
           style={{
             paddingHorizontal: 25,

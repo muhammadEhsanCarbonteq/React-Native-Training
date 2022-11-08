@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Pressable, SafeAreaView, View} from 'react-native';
+import {Image, Pressable, SafeAreaView, StyleSheet, View} from 'react-native';
 import CustomButton from '../common/CustomButton';
 import InputField from '../common/InputField';
 import TitleDescriptionComponent from '../common/TitleDescriptionComponent';
@@ -26,12 +26,7 @@ function CreateNewPasswordScreen({
           width: 22,
         }}>
         <Image
-          style={{
-            width: 22,
-            height: 20,
-            marginLeft: 15,
-            marginBottom: 30,
-          }}
+          style={styles.backArrowImage}
           source={require('../../images/BackArrow.png')}
         />
       </Pressable>

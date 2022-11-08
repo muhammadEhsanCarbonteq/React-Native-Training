@@ -21,12 +21,7 @@ function MobileNumberScreen({
           width: 22,
         }}>
         <Image
-          style={{
-            width: 22,
-            height: 20,
-            marginLeft: 15,
-            marginBottom: 30,
-          }}
+          style={styles.backArrowImage}
           source={require('../../images/BackArrow.png')}
         />
       </Pressable>

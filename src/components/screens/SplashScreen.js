@@ -1,23 +1,10 @@
 import React from 'react';
-import {Image, SafeAreaView, Text, View} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
 function SplashScreen() {
   return (
-    <SafeAreaView
-      style={{
-        width: '100%',
-        height: '100%',
-        backgroundColor: '#3B68FF',
-      }}>
-      <View
-        style={{
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.body}>
         <Image
           style={{width: '53%', height: '25%'}}
           source={require('../../images/Group30.png')}
@@ -43,4 +30,19 @@ function SplashScreen() {
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#3B68FF',
+  },
+  body: {
+    height: '100%',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 export default SplashScreen;

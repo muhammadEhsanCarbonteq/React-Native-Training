@@ -5,7 +5,7 @@ import styles from '../../styles/sharedStylesheet';
 import CustomSingleRole from '../common/CustomSingleRole';
 import roleList from '../../constants/roleList';
 
-function RoleScreen({onPressBack, roleType, onSelectRole}) {
+function RoleScreen({onPressBack, onSelectRole}) {
   return (
     <SafeAreaView style={styles.container}>
       <Pressable
@@ -14,12 +14,7 @@ function RoleScreen({onPressBack, roleType, onSelectRole}) {
           width: 22,
         }}>
         <Image
-          style={{
-            width: 22,
-            height: 20,
-            marginLeft: 15,
-            marginBottom: 30,
-          }}
+          style={styles.backArrowImage}
           source={require('../../images/BackArrow.png')}
         />
       </Pressable>

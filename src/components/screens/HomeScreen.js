@@ -1,52 +1,28 @@
 import React from 'react';
-import {Image, Pressable, SafeAreaView, Text, View} from 'react-native';
+import {
+  Image,
+  Pressable,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import styles from '../../styles/sharedStylesheet';
 
 function HomeScreen({onSelectMenu}) {
   return (
     <SafeAreaView>
       <SafeAreaView style={styles.container}>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
+        <View style={loaclStyles.pageHeaderContainer}>
           <View>
-            <Text
-              style={{
-                fontSize: 28,
-                color: 'black',
-              }}>
-              Good Morning
-            </Text>
-            <Text
-              style={{
-                fontSize: 28,
-                fontWeight: '700',
-                color: 'black',
-              }}>
-              Olivia
-            </Text>
+            <Text style={loaclStyles.headerText}>Good Morning</Text>
+            <Text style={loaclStyles.userName}>Olivia</Text>
           </View>
           <Image source={require('../../images/Face.png')} />
         </View>
 
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            marginTop: 24,
-          }}>
-          <View
-            style={{
-              height: 205,
-              width: '48%',
-              backgroundColor: '#140F28',
-              borderRadius: 30,
-              paddingHorizontal: 10,
-              paddingVertical: 18,
-            }}>
+        <View style={loaclStyles.bodyContainer}>
+          <View style={loaclStyles.singleSection}>
             <View
               style={{
                 //   marginVertical: 10,
@@ -70,36 +46,9 @@ function HomeScreen({onSelectMenu}) {
                 }}
               />
             </View>
-            <View
-              style={{
-                alignSelf: 'center',
-                marginTop: 12,
-                height: '40%',
-                width: '85%',
-                borderTopEndRadius: 100,
-                borderTopStartRadius: 100,
-                backgroundColor: 'white',
-              }}>
-              <View
-                style={{
-                  backgroundColor: '#140F28',
-                  width: '85%',
-                  height: '85%',
-                  marginTop: '9%',
-                  marginHorizontal: '8%',
-
-                  borderTopEndRadius: 100,
-                  borderTopStartRadius: 100,
-                }}>
-                <Text
-                  style={{
-                    fontSize: 22,
-                    color: '#ffffff',
-                    marginTop: 26,
-                    alignSelf: 'center',
-                  }}>
-                  24%
-                </Text>
+            <View style={loaclStyles.graphContainer}>
+              <View style={loaclStyles.graphContent}>
+                <Text style={loaclStyles.graphText}>24%</Text>
               </View>
             </View>
             <View
@@ -109,67 +58,25 @@ function HomeScreen({onSelectMenu}) {
                 marginVertical: 23,
                 marginHorizontal: 6,
               }}>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignContent: 'center',
-                }}>
-                <Text
-                  style={{
-                    color: 'white',
-                    alignSelf: 'center',
-                  }}>
-                  24
-                </Text>
+              <View style={loaclStyles.firstSectionTextContainer}>
+                <Text style={loaclStyles.sectionText}>24</Text>
                 <View
                   style={{
                     flexDirection: 'row',
                     alignItems: 'center',
                   }}>
-                  <View
-                    style={{
-                      height: 7,
-                      width: 7,
-                      borderRadius: 7,
-                      backgroundColor: '#ffffff',
-                      marginRight: 3,
-                    }}
-                  />
-                  <Text
-                    style={{
-                      color: 'white',
-                      fontSize: 12,
-                    }}>
-                    Positive
-                  </Text>
+                  <View style={loaclStyles.textDot} />
+                  <Text style={loaclStyles.fontSize12}>Positive</Text>
                 </View>
               </View>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignContent: 'center',
-                }}>
-                <Text
-                  style={{
-                    color: 'white',
-                    alignSelf: 'center',
-                  }}>
-                  76
-                </Text>
+              <View style={loaclStyles.firstSectionTextContainer}>
+                <Text style={loaclStyles.sectionText}>76</Text>
                 <View
                   style={{
                     flexDirection: 'row',
                     alignItems: 'center',
                   }}>
-                  <View
-                    style={{
-                      height: 7,
-                      width: 7,
-                      borderRadius: 7,
-                      backgroundColor: 'rgba(255, 255, 255, 0.31)',
-                      marginRight: 3,
-                    }}
-                  />
+                  <View style={loaclStyles.textDot} />
                   <Text
                     style={{
                       color: 'rgba(255, 255, 255, 0.31)',
@@ -182,15 +89,7 @@ function HomeScreen({onSelectMenu}) {
               </View>
             </View>
           </View>
-          <View
-            style={{
-              height: 205,
-              width: '48%',
-              backgroundColor: '#ffffff',
-              borderRadius: 30,
-              paddingHorizontal: 14,
-              paddingVertical: 18,
-            }}>
+          <View style={loaclStyles.singleSectionWhite}>
             <Text
               style={{
                 fontSize: 18,
@@ -198,14 +97,7 @@ function HomeScreen({onSelectMenu}) {
               }}>
               Entrance Rate
             </Text>
-            <View
-              style={{
-                marginTop: 38,
-                marginBottom: 22,
-                alignItems: 'center',
-                flexDirection: 'row',
-                justifyContent: 'space-around',
-              }}>
+            <View style={loaclStyles.barGraphContainer}>
               <View style={styles.blueVerticalLine} />
               <View style={styles.blueVerticalLine} />
               <View style={styles.blueVerticalLine} />
@@ -215,18 +107,11 @@ function HomeScreen({onSelectMenu}) {
               <View style={styles.grayVerticalLine} />
             </View>
             <View>
-              <Text
-                style={{
-                  fontSize: 18,
-                  color: 'black',
-                  fontWeight: '700',
-                }}>
-                76%
-              </Text>
+              <Text style={loaclStyles.fontSize18Black}>76%</Text>
               <Text
                 style={{
                   color: '#B3BBD4',
-                  fontSize: 12,
+                  fontSize: 11,
                 }}>
                 From public to dirty zone
               </Text>
@@ -268,14 +153,7 @@ function HomeScreen({onSelectMenu}) {
                   justifyContent: 'space-between',
                 }}>
                 <View>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      color: 'black',
-                      fontWeight: '600',
-                    }}>
-                    105
-                  </Text>
+                  <Text style={loaclStyles.fontSize18Black}>105</Text>
                   <Text
                     style={{
                       fontSize: 12,
@@ -284,14 +162,7 @@ function HomeScreen({onSelectMenu}) {
                   </Text>
                 </View>
                 <View>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      color: 'black',
-                      fontWeight: '600',
-                    }}>
-                    22
-                  </Text>
+                  <Text style={loaclStyles.fontSize18Black}>22</Text>
                   <Text
                     style={{
                       fontSize: 12,
@@ -325,19 +196,12 @@ function HomeScreen({onSelectMenu}) {
                   justifyContent: 'space-between',
                 }}>
                 <View>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      color: 'black',
-                      fontWeight: '600',
-                    }}>
-                    126
-                  </Text>
+                  <Text style={loaclStyles.fontSize18Black}>126</Text>
                   <Text
                     style={{
                       fontSize: 12,
                     }}>
-                    Dirty zone
+                    People
                   </Text>
                 </View>
               </View>
@@ -372,14 +236,7 @@ function HomeScreen({onSelectMenu}) {
               style={{
                 paddingHorizontal: 14,
               }}>
-              <Text
-                style={{
-                  fontSize: 18,
-                  fontWeight: '700',
-                  color: 'black',
-                }}>
-                08:02
-              </Text>
+              <Text style={loaclStyles.fontSize18Black}>08:02</Text>
               <Text
                 style={{
                   fontSize: 12,
@@ -390,22 +247,7 @@ function HomeScreen({onSelectMenu}) {
           </View>
         </View>
       </SafeAreaView>
-      <View
-        style={{
-          position: 'absolute',
-          height: '10%',
-          width: '100%',
-          borderTopEndRadius: 30,
-          //   borderBottomEndRadius: 30,
-          borderTopStartRadius: 30,
-          backgroundColor: 'white',
-          paddingHorizontal: 54,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          bottom: 0,
-          marginBottom: 0,
-          alignItems: 'center',
-        }}>
+      <View style={styles.bottomTab}>
         <Pressable>
           <Image source={require('../../images/Home.png')} />
         </Pressable>
@@ -424,5 +266,99 @@ function HomeScreen({onSelectMenu}) {
     </SafeAreaView>
   );
 }
+
+const loaclStyles = StyleSheet.create({
+  pageHeaderContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  headerText: {
+    fontSize: 28,
+    color: 'black',
+  },
+  userName: {
+    fontSize: 28,
+    fontWeight: '700',
+    color: 'black',
+  },
+  bodyContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 24,
+  },
+  singleSection: {
+    height: 205,
+    width: '48%',
+    backgroundColor: '#140F28',
+    borderRadius: 30,
+    paddingHorizontal: 10,
+    paddingVertical: 18,
+  },
+  singleSectionWhite: {
+    height: 205,
+    width: '48%',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 30,
+    paddingHorizontal: 10,
+    paddingVertical: 18,
+  },
+  graphContainer: {
+    alignSelf: 'center',
+    marginTop: 12,
+    height: '40%',
+    width: '85%',
+    borderTopEndRadius: 100,
+    borderTopStartRadius: 100,
+    backgroundColor: 'white',
+  },
+  graphContent: {
+    backgroundColor: '#140F28',
+    width: '85%',
+    height: '85%',
+    marginTop: '9%',
+    marginHorizontal: '8%',
+
+    borderTopEndRadius: 100,
+    borderTopStartRadius: 100,
+  },
+  graphText: {
+    fontSize: 22,
+    color: '#ffffff',
+    marginTop: 26,
+    alignSelf: 'center',
+  },
+  firstSectionTextContainer: {
+    justifyContent: 'center',
+    alignContent: 'center',
+  },
+  sectionText: {
+    color: 'white',
+    alignSelf: 'center',
+  },
+  textDot: {
+    height: 7,
+    width: 7,
+    borderRadius: 7,
+    backgroundColor: '#ffffff',
+    marginRight: 3,
+  },
+  fontSize12: {
+    color: 'white',
+    fontSize: 12,
+  },
+  barGraphContainer: {
+    marginTop: 38,
+    marginBottom: 22,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  fontSize18Black: {
+    fontSize: 18,
+    color: 'black',
+    fontWeight: '700',
+  },
+});
 
 export default HomeScreen;
