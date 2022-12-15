@@ -1,0 +1,34 @@
+import React, {useState} from 'react';
+import MobileNumberComponent from '../components/MobileNumberComponent';
+
+function MobileNumberScreen({navigation}) {
+  const [countryCode, setCountryCode] = useState({
+    name: 'England',
+    code: 'en',
+    c_code: '+44',
+    flag: require('../images/flag/England.png'),
+  });
+  const [number, setNumber] = useState('123456788');
+  const onChangeCountryCode = obj => {
+    setCountryCode(obj);
+  };
+  const onPressBack = () => {
+    navigation.navigate('Login', {name: 'Login'});
+  };
+
+  const onNext = () => {
+    navigation.navigate('OTP', {name: 'OTP'});
+  };
+  return (
+    <MobileNumberComponent
+      onPressBack={onPressBack}
+      countryCode={countryCode}
+      setCountryCode={onChangeCountryCode}
+      number={number}
+      setNumber={setNumber}
+      onNext={onNext}
+    />
+  );
+}
+
+export default MobileNumberScreen;

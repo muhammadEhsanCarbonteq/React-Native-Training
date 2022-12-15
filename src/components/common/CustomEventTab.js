@@ -1,9 +1,9 @@
 import React from 'react';
-import {Image, Pressable, Text, View} from 'react-native';
-import icon from '../../images/facebook.png';
+import { Pressable, Text, View} from 'react-native';
+import icon from '../../images/facebook.svg';
 
 function CustomEventTab({
-  image = icon,
+  Eimage = icon,
   heading = 'Facebook',
   By = 'By Facebook',
   description = 'At 3891 Ranchview Dr. Richardson, California',
@@ -32,14 +32,13 @@ function CustomEventTab({
           height: 67,
           borderRadius: 22,
         }}>
-        <Image
+        <Eimage
           style={{
             height: '75%',
             width: '75%',
             marginLeft: 15,
             marginTop: 7,
           }}
-          source={image}
         />
       </View>
       <View

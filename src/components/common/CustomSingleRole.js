@@ -3,7 +3,7 @@ import {Image, Pressable, Text, View} from 'react-native';
 import CustomNextButton from './CustomNextButton';
 
 function CustomSingleRole({
-  image = require('../../images/AdminClinic.png'),
+  Eimage ,
   name = 'ADMIN/CLINICAL',
   id,
   onSelectRole,
@@ -25,8 +25,7 @@ function CustomSingleRole({
         marginVertical: 10,
       }}
       onPress={() => onSelectRole(id)}>
-      <Image
-        source={image}
+      <Eimage
         style={{
           height: '100%',
           width: '40%',

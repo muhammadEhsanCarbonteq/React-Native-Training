@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
-import styles from '../../styles/sharedStylesheet';
+import styles from './sharedStylesheet';
+import EyeSvg from '../../images/eye.svg'
 
 function InputField({
   name = 'Email',
@@ -29,7 +30,7 @@ function InputField({
           <TouchableOpacity
             onPress={setShowPassword}
             style={{position: 'absolute', right: 15, top: 25}}>
-            <Image source={require('../../images/eye.png')} />
+            <EyeSvg  />
           </TouchableOpacity>
         </>
       ) : (

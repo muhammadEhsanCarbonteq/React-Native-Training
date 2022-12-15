@@ -1,8 +1,8 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 
 function CustomProductComponent({
-  image = '../../images/EventScreen.png',
+  Eimage = '../../images/EventScreen.svg',
   title,
 }) {
   return (
@@ -15,7 +15,7 @@ function CustomProductComponent({
         backgroundColor: 'white',
         borderRadius: 30,
       }}>
-      <Image source={image} />
+      <Eimage  />
       <Text
         style={{
           fontSize: 18,

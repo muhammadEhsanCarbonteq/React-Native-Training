@@ -1,18 +1,24 @@
+import AdminClinic from '../images/AdminClinic.svg'
+import Resulting from '../images/Resulting.svg'
+import EventAdmission from '../images/EventAdmission.svg'
+
+
+
 const roleList = [
   {
     id: 1,
     name: 'ADMIN/CLINICAL',
-    image: require('../images/AdminClinic.png'),
+    image: AdminClinic,
   },
   {
     id: 2,
     name: 'RESULTING',
-    image: require('../images/Resulting.png'),
+    image: Resulting,
   },
   {
     id: 3,
     name: 'EVENT ADMISSION',
-    image: require('../images/EventAdmission.png'),
+    image: EventAdmission,
   },
 ];
 

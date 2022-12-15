@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image, View} from 'react-native';
+import { View} from 'react-native';
+import PathSvg from '../../images/Path.svg';
 
 function CustomNextButton() {
   return (
@@ -14,9 +15,8 @@ function CustomNextButton() {
         borderWidth: 1,
         borderColor: '#E1E8E8',
       }}>
-      <Image
+      <PathSvg
         style={{width: 6, height: 10}}
-        source={require('../../images/Path.png')}
       />
     </View>
   );

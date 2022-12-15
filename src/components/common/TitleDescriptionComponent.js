@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import styles from '../../styles/sharedStylesheet';
+import styles from './sharedStylesheet';
 
 function TitleDescriptionComponent({title, description}) {
   return (

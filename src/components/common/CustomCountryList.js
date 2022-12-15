@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Image, Text, TextInput, View} from 'react-native';
 import {countries} from '../../constants/countryList';
 import SelectDropdown from 'react-native-select-dropdown';
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import {Image, StyleSheet, TextInput, View} from 'react-native';
+import { StyleSheet, TextInput, View} from 'react-native';
+import VectorSvg from '../../images/Vector.svg';
 
 function CustomSearchbar({text, onChangeText}) {
   return (
     <View style={styles.searchSection}>
-      <Image
+      <VectorSvg
         style={styles.searchIcon}
-        source={require('../../images/Vector.png')}
       />
       <TextInput
         style={styles.input}

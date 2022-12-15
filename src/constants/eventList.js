@@ -1,27 +1,34 @@
+import facebook from '../images/facebook.svg';
+import addidas from '../images/addidas.svg';
+import instagram from '../images/instagram.svg';
+import apple from '../images/apple.svg';
+
+
+
 const eventList = [
   {
-    image: require('../images/facebook.png'),
+    image: facebook,
     heading: 'Facebook Conference',
     By: 'By Facebook',
     name: 'Facebook',
     description: 'At 3891 Ranchview Dr. Richardson, California',
   },
   {
-    image: require('../images/addidas.png'),
+    image: addidas,
     heading: 'Addidas Conference',
     By: 'By Google',
     name: 'Addidas',
     description: 'At 3891 Ranchview Dr. Richardson, California',
   },
   {
-    image: require('../images/instagram.jpeg'),
+    image: instagram,
     heading: 'Instagram Conference',
     By: 'By Facebook',
     name: 'Instagram',
     description: 'At 3891 Ranchview Dr. Richardson, California',
   },
   {
-    image: require('../images/apple.png'),
+    image: apple,
     heading: 'Apple Conference',
     By: 'By Apple',
     name: 'Apple',
