@@ -27,6 +27,7 @@ const AuthNavigation = ({ authorization }) => {
 
             <Stack.Screen name="OTP" component={OtpScreen} />
             <Stack.Screen name="CreatePassword">
+                
                 {props => (
                     <CreateNewPasswordScreen {...props} data={'CreatePassword'} authorization={authorization} />
                 )}
